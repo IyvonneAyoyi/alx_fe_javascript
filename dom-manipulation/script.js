@@ -8,7 +8,7 @@ const quotes = storedQuotes ? JSON.parse(storedQuotes) : [
   {text: "Learning to write programs stretches your mind, and helps you think better. — Bill Gates" ,category: "inspirational"}
 ];
 
-// Step 2: Helper function to save quotes array to localStorage
+// Function to save quotes array to localStorage
 function saveQuotes() {
   localStorage.setItem('quotes', JSON.stringify(quotes));
 }
@@ -25,7 +25,10 @@ function showRandomQuote(quotes) {
    const displayQuote = document.getElementById('quoteDisplay');
 
    //  set its text to the quote’s text property
-   displayQuote.innerHTML= randomQuote.text
+   displayQuote.innerHTML= randomQuote.text;
+
+   // Save last viewed quote index to sessionStorage
+    sessionStorage.setItem('lastQuoteIndex', randomIndex);
 };
 
 //Show random quote when page loads
