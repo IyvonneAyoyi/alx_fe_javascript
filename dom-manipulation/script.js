@@ -35,3 +35,9 @@ const newQuoteButton = document.getElementById('newQuote');
 newQuoteButton.addEventListener('click',()=>{
     showRandomQuote(quotes);
 });
+
+function createAddQuoteForm() {
+  
+};
+
+ createAddQuoteForm();
