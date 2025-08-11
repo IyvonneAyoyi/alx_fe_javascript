@@ -165,3 +165,7 @@ function createAddQuoteForm() {
   //Remove the url
   URL.revokeObjectURL(url); 
 }
+
+//Add event listener to export button
+document.getElementById("exportQuotes").addEventListener("click", exportQuotes);
+
