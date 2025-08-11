@@ -139,3 +139,6 @@ function createAddQuoteForm() {
     };
     fileReader.readAsText(event.target.files[0]);
   }
+
+  //Add event listener to import 
+  document.getElementById("importFile").addEventListener("change", importFromJsonFile);
