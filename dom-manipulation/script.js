@@ -41,7 +41,7 @@ showRandomQuote(quotes);
 //Create function to add new form
 function createAddQuoteForm() {
     //Get the container div where the form will be added
-    const quoteFormContainer = document.querySelector('.formContainer');
+    const quoteFormContainer = document.getElementById('formContainer');
 
     //Create form element
     const form = document.createElement('form');
@@ -64,6 +64,16 @@ function createAddQuoteForm() {
     const submitButton = document.createElement('button');
     submitButton.type = 'submit';
     submitButton.textContent = 'Add Quote';
+
+    // Appending Form Input Eement
+    form.appendChild(inputText);
+    form.appendChild(inputCategory);
+    form.appendChild(submitButton);
+    
+    //Appending form element to div container
+    quoteFormContainer.appendChild(form);
+    console.log('Inputs added:', inputText, inputCategory);
+
 };
 
  createAddQuoteForm();
