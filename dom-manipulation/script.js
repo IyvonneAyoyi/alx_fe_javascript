@@ -8,7 +8,10 @@ const quotes = storedQuotes ? JSON.parse(storedQuotes) : [
   {text: "Learning to write programs stretches your mind, and helps you think better. — Bill Gates" ,category: "inspirational"}
 ];
 
-
+// Step 2: Helper function to save quotes array to localStorage
+function saveQuotes() {
+  localStorage.setItem('quotes', JSON.stringify(quotes));
+}
 
 
 function showRandomQuote(quotes) {
@@ -42,7 +45,7 @@ showRandomQuote(quotes);
 function createAddQuoteForm() {
     //Get the container div where the form will be added
     const quoteFormContainer = document.getElementById('formContainer');
-
+    
 
     //Create form element
     const form = document.createElement('form');
