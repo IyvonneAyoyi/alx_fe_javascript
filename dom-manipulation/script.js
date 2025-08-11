@@ -11,7 +11,7 @@ const quotes = [
 
 
 
-function showRandomQuote(quotes) {
+function displayRandomQuote(quotes) {
 
     // Pick random quote
     const randomIndex = Math.floor(Math.random() * quotes.length);
@@ -26,12 +26,12 @@ function showRandomQuote(quotes) {
 };
 
 //Show random quote when page loads
-showRandomQuote(quotes);
+displayRandomQuote(quotes);
 
 // Get button by id
 const newQuoteButton = document.getElementById('newQuote');
 
 //Add event Listener to the button
 newQuoteButton.addEventListener('click',()=>{
-    showRandomQuote(quotes);
+    displayRandomQuote(quotes);
 });
