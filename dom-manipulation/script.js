@@ -129,6 +129,7 @@ function createAddQuoteForm() {
 
  createAddQuoteForm();
 
+ // Function for Importing file
  function importFromJsonFile(event) {
     const fileReader = new FileReader();
     fileReader.onload = function(event) {
@@ -142,3 +143,25 @@ function createAddQuoteForm() {
 
   //Add event listener to import 
   document.getElementById("importFile").addEventListener("change", importFromJsonFile);
+
+
+// Function for exporting json files
+  function exportQuotes() {
+  const dataStr = JSON.stringify(quotes, null, 2); // Convert quotes array to pretty JSON string
+  const blob = new Blob([dataStr], { type: "application/json" }); // Create a Blob with JSON MIME type
+  const url = URL.createObjectURL(blob); // Create a downloadable URL for the Blob
+
+
+  // create anchor element for url
+  const a = document.createElement("a"); 
+  a.href = url;
+
+  //default file name
+  a.download = "quotes.json"; 
+
+  // Programmatically click to trigger download
+  a.click(); 
+
+  //Remove the url
+  URL.revokeObjectURL(url); 
+}
