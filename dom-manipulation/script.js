@@ -74,8 +74,37 @@ function createAddQuoteForm() {
     quoteFormContainer.appendChild(form);
     console.log('Inputs added:', inputText, inputCategory);
 
+    // Add event listener to the submit button
+    form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    //Remove whitespace from text values
+  const newQuoteText = inputText.value.trim();
+  const newQuoteCategory = inputCategory.value.trim();
+
+  // Error Handling
+  if (!newQuoteText || !newQuoteCategory) {
+    console.log('Please enter both a quote and a category.');
+    return;
+  }
+
+ //New Quotes object 
+ const newQuote = {
+    text: newQuoteText,
+    category: newQuoteCategory
+  };
+
+  // Add new quote to the array
+  quotes.push(newQuote); 
+  
+  // Optionally show a random quote (could be the new one)
+  showRandomQuote(quotes); 
+
+
+  // Clear input fields
+  inputText.value = '';      
+  inputCategory.value = '';
+});
 };
 
  createAddQuoteForm();
-
- //Dynamically Add Quotes
