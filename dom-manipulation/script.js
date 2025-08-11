@@ -31,6 +31,17 @@ function showRandomQuote(quotes) {
     sessionStorage.setItem('lastQuoteIndex', randomIndex);
 };
 
+// On page load show last quote from sessionStorage or random quote
+window.onload = () => {
+  const lastIndex = sessionStorage.getItem('lastQuoteIndex');
+  if (lastIndex !== null && quotes[lastIndex]) {
+    document.getElementById('quoteDisplay').innerHTML = quotes[lastIndex].text;
+  } else {
+    showRandomQuote(quotes);
+  }
+};
+
+
 //Show random quote when page loads
 showRandomQuote(quotes);
 
