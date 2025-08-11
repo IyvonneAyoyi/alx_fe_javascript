@@ -9,3 +9,29 @@ const quotes = [
   { text: "Learning to write programs stretches your mind, and helps you think better. — Bill Gates" ,category: "inspirational"}
 ];
 
+
+
+function showRandomQuote(quotes) {
+
+    // Pick random quote
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const randomQuote = quotes[randomIndex];
+    console.log(randomQuote); 
+
+    //Get element by id
+   const displayQuote = document.getElementById('quoteDisplay');
+
+   //  set its text to the quote’s text property
+   displayQuote.textContent= randomQuote.text
+};
+
+//Show random quote when page loads
+showRandomQuote(quotes);
+
+// Get button by id
+const newQuoteButton = document.getElementById('newQuote');
+
+//Add event Listener to the button
+newQuoteButton.addEventListener('click',()=>{
+    showRandomQuote(quotes);
+});
