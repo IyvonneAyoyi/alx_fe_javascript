@@ -22,7 +22,7 @@ function showRandomQuote(quotes) {
    const displayQuote = document.getElementById('quoteDisplay');
 
    //  set its text to the quote’s text property
-   displayQuote.textContent= randomQuote.text
+   displayQuote.innerHTML= randomQuote.text
 };
 
 //Show random quote when page loads
