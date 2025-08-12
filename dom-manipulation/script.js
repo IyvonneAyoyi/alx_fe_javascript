@@ -116,6 +116,7 @@ function createAddQuoteForm() {
 
   // Add new quote to the array
   quotes.push(newQuote); 
+  saveQuotes();
   
   // Optionally show a random quote (could be the new one)
   showRandomQuote(quotes); 
@@ -132,11 +133,25 @@ function createAddQuoteForm() {
  // Function for Importing file
  function importFromJsonFile(event) {
     const fileReader = new FileReader();
-    fileReader.onload = function(event) {
+      
+      //Handling errors
+      
+         fileReader.onload = function(event) {
+      try {
       const importedQuotes = JSON.parse(event.target.result);
+      // Validate importedQuotes is an array and has required structure
+      if (!Array.isArray(importedQuotes) || !importedQuotes.every(q => q.text && q.category)) {
+        alert('Invalid file format: JSON must be an array of quotes with text and category.');
+        return;
+      }
+
       quotes.push(...importedQuotes);
       saveQuotes();
       alert('Quotes imported successfully!');
+
+     } catch (error) {
+      alert('Error parsing JSON file: ' + error.message);
+    }
     };
     fileReader.readAsText(event.target.files[0]);
   }
