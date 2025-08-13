@@ -1,0 +1,58 @@
+{
+  "quotes": [
+    {
+      "id": "1",
+      "text": "Code is like humor. When you have to explain it, it’s bad. — Cory House",
+      "category": "motivational",
+      "updatedAt": "2025-08-14T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "text": "Don’t stop when you’re tired. Stop when you’re done.",
+      "category": "motivational",
+      "updatedAt": "2025-08-14T10:05:00Z"
+    },
+    {
+      "id": "3",
+      "text": "Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.",
+      "category": "motivational",
+      "updatedAt": "2025-08-14T10:10:00Z"
+    },
+    {
+      "id": "4",
+      "text": "The best way to predict the future is to invent it. — Alan Kay",
+      "category": "inspirational",
+      "updatedAt": "2025-08-14T10:15:00Z"
+    },
+    {
+      "id": "5",
+      "text": "Simplicity is the soul of efficiency. — Austin Freeman",
+      "category": "inspirational",
+      "updatedAt": "2025-08-14T10:20:00Z"
+    },
+    {
+      "id": "6",
+      "text": "Learning to write programs stretches your mind, and helps you think better. — Bill Gates",
+      "category": "inspirational",
+      "updatedAt": "2025-08-14T10:25:00Z"
+    },
+    {
+      "id": "4adc",
+      "text": "The gonna doers are the never doers",
+      "category": "Motivational",
+      "updatedAt": "2025-08-13T20:36:06.219Z"
+    },
+    {
+      "id": "6daa",
+      "text": "Success is not final, failure is not fatal: It is the courage to continue that counts. — Winston Churchill",
+      "category": "Inspirational",
+      "updatedAt": "2025-08-13T20:36:21.604Z"
+    },
+    {
+      "id": "2c9c",
+      "text": "I am who I think I am",
+      "category": "Motivational",
+      "updatedAt": "2025-08-13T20:43:31.682Z"
+    }
+  ]
+}
