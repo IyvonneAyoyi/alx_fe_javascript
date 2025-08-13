@@ -64,6 +64,10 @@ async function syncQuotes() {
       populateCategories(serverQuotes);
       alert("Quotes updated from server (server wins)");
     }
+
+    //Notification for updates or conflicts
+    alert("Quotes synced with server!");
+
   } catch (error) {
     console.error("Sync failed:", error);
   }
@@ -124,6 +128,7 @@ function createAddQuoteForm(quotes) {
   form.appendChild(submitButton);
   quoteFormContainer.appendChild(form);
 
+  //Add event listener
   form.addEventListener('submit', async function(event) {
     event.preventDefault();
     const newQuoteText = inputText.value.trim();
