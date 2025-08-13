@@ -1,7 +1,7 @@
 const API_URL = "http://localhost:3000/quotes";
 
 // Fetch quotes from server or fallback to localStorage
-async function loadQuotes() {
+async function fetchQuotesFromServer()  {
   try {
     const response = await fetch(API_URL);
     const serverQuotes = await response.json();
