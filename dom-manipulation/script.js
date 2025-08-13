@@ -1,5 +1,14 @@
 const API_URL = "http://localhost:3000/quotes";
 
+
+//JSON Placeholder
+async function fetchDummyPosts() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const posts = await response.json();
+  console.log("Fetched dummy posts:", posts);
+  return posts;
+}
+
 // Fetch quotes from server or fallback to localStorage
 async function fetchQuotesFromServer()  {
   try {
@@ -62,7 +71,7 @@ async function syncQuotes() {
 
 // Initialize app
 async function init() {
-  const quotes = await loadQuotes();
+  const quotes = await fetchQuotesFromServer();
 
   // Show last quote or random
   const lastIndex = sessionStorage.getItem('lastQuoteIndex');
